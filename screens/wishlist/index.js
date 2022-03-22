@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Colors from '../../themes/colors'
 
-export default function Home() {
+export default function WhishList() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Home Screen</Text>
+      <Text style={styles.title}>WhishList</Text>
     </View>
   )
 }

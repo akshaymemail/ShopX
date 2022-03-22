@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Colors from '../../themes/colors'
 
-export default function Home() {
+export default function Login() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Home Screen</Text>
+      <Text style={styles.title}>Login</Text>
     </View>
   )
 }

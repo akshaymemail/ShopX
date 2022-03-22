@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Colors from '../../themes/colors'
 
-export default function Login() {
+export default function Orders() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Orders</Text>
     </View>
   )
 }
@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.PRIMARY.PURE_WHITE,
   },
   title: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: Colors.LABEL.OFF_BLUE,
   },
 })
