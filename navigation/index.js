@@ -6,7 +6,6 @@ import Login from '../screens/auth/Login'
 
 export default function Navigator() {
   const [loading, setLoading] = useState(true)
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false)
@@ -16,8 +15,6 @@ export default function Navigator() {
   if (loading) {
     return <Splash />
   }
-  if (!isLoggedIn) {
-    return <Login />
-  }
+
   return <Home />
 }
