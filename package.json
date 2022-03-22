@@ -7,11 +7,6 @@
     "trailingComma": "es5",
     "semi": false
   },
-  "eslintConfig": {
-    "rules": {
-      "semi": "off"
-    }
-  },
   "private": true,
   "scripts": {
     "android": "react-native run-android",

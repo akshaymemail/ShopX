@@ -1,23 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+/* eslint-disable semi */
 import React from 'react'
+import Navigator from './navigation'
 
 export default function App() {
-  return (
-    <View style={styles.screen}>
-      <Text style={styles.text}>App</Text>
-    </View>
-  )
+  return <Navigator />
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  text: {
-    fontSize: 20,
-    color: '#000000',
-  },
-})
