@@ -84,7 +84,7 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
               testID={options.tabBarTestID}
               onPress={onPress}
               onLongPress={onLongPress}
-              style={{ flex: 1, ...styles.tabItem }}
+              style={styles.tabItem}
             >
               {/* <FontAwesome5
                 style={isFocused ? styles.active : styles.inActive}
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   tabItem: {
+    flex: 1,
     alignItems: 'center',
     margin: 5,
   },
