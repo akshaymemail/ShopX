@@ -1,6 +1,17 @@
 {
   "name": "ShopX",
   "version": "0.0.1",
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  },
+  "eslintConfig": {
+    "rules": {
+      "semi": "off"
+    }
+  },
   "private": true,
   "scripts": {
     "android": "react-native run-android",

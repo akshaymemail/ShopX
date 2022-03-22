@@ -1,12 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
 export default function App() {
   return (
     <View style={styles.screen}>
       <Text style={styles.text}>App</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#000000',
   },
-});
+})
