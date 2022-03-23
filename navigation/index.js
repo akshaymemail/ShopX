@@ -1,6 +1,7 @@
 /* eslint-disable semi */
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import React, { useState, useEffect, Fragment } from 'react'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Splash from '../screens/splash'
 import Home from '../screens/home'
 import { NavigationContainer } from '@react-navigation/native'
@@ -32,10 +33,34 @@ export default function Navigator() {
         }}
         tabBar={(props) => <MyTabBar {...props} />}
       >
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="WhishList" component={WhishList} />
-        <Tab.Screen name="Orders" component={Orders} />
-        <Tab.Screen name="Login" component={Login} />
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          initialParams={{
+            icon: 'home',
+          }}
+        />
+        <Tab.Screen
+          name="WhishList"
+          component={WhishList}
+          initialParams={{
+            icon: 'heart',
+          }}
+        />
+        <Tab.Screen
+          name="Orders"
+          component={Orders}
+          initialParams={{
+            icon: 'shopping-bag',
+          }}
+        />
+        <Tab.Screen
+          name="Login"
+          component={Login}
+          initialParams={{
+            icon: 'user',
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   )
@@ -86,11 +111,11 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
               onLongPress={onLongPress}
               style={styles.tabItem}
             >
-              {/* <FontAwesome5
+              <FontAwesome
                 style={isFocused ? styles.active : styles.inActive}
                 name={params.icon}
                 size={30}
-              /> */}
+              />
               <Text style={isFocused ? styles.active : styles.inActive}>
                 {label}
               </Text>
