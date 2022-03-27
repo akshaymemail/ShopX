@@ -6,7 +6,7 @@ import Colors from '../../themes/colors'
 export default function Splash() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Loading..., Please wait!</Text>
+      <Text style={styles.title}>Splash...</Text>
     </View>
   )
 }

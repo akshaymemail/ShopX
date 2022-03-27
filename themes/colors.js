@@ -4,6 +4,7 @@ const Colors = {
     ORANGE_FRESH: '#FFC120',
     NAVY_BLACK: '#0C1A30F',
     PURE_WHITE: '#FFFFFF',
+    PURE_BLACK: '#000000',
   },
   SECONDARY: {
     EARTH_GREEN: '#3A9B7A',

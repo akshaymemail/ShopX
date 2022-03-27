@@ -1,5 +1,11 @@
 /* eslint-disable semi */
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  Platform,
+} from 'react-native'
 import React, { useState, useEffect, Fragment } from 'react'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Splash from '../screens/splash'
@@ -134,6 +140,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
+    shadowColor: Colors.PRIMARY.PURE_BLACK,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    elevation: 10,
+    paddingBottom: Platform.OS === 'android' ? 0 : 20,
   },
   tabItem: {
     flex: 1,
