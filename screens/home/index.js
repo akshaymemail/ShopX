@@ -4,6 +4,8 @@ import React, { Fragment } from 'react'
 import Colors from '../../themes/colors'
 import Header from '../../components/Header'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import BannerSlide from '../../components/BannerSlide'
+import banners from '../../fakedb/banners'
 
 export default function Home({ navigation }) {
   return (
@@ -19,6 +21,7 @@ export default function Home({ navigation }) {
           )
         }}
       />
+      <BannerSlide banners={banners} />
     </View>
   )
 }
