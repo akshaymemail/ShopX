@@ -16,6 +16,7 @@ import WhishList from '../screens/wishlist'
 import Orders from '../screens/orders'
 import Login from '../screens/login'
 import Colors from '../themes/colors'
+import MyStatusBar from '../components/StatusBar'
 
 export default function Navigator() {
   const Tab = createBottomTabNavigator()
@@ -32,6 +33,7 @@ export default function Navigator() {
 
   return (
     <NavigationContainer>
+      <MyStatusBar />
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
