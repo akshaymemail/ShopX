@@ -2,7 +2,7 @@ const Colors = {
   PRIMARY: {
     BLUE_OCEAN: '#3669C9',
     ORANGE_FRESH: '#FFC120',
-    NAVY_BLACK: '#0C1A30F',
+    NAVY_BLACK: '#0C1A30',
     PURE_WHITE: '#FFFFFF',
     PURE_BLACK: '#000000',
   },

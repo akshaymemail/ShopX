@@ -6,8 +6,14 @@ import Header from '../../components/Header'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import BannerSlide from '../../components/BannerSlide'
 import banners from '../../fakedb/banners'
+import SearchBar from '../../components/SearchBar'
+import Categories from '../../components/Categories'
+import categories from '../../fakedb/categories'
 
 export default function Home({ navigation }) {
+  const onSeeAll = () => {
+    alert('See All')
+  }
   return (
     <View style={styles.screen}>
       <Header
@@ -21,7 +27,9 @@ export default function Home({ navigation }) {
           )
         }}
       />
+      <SearchBar placeholder="Search Product Name" />
       <BannerSlide banners={banners} />
+      <Categories categories={categories} onSeeAll={onSeeAll} />
     </View>
   )
 }

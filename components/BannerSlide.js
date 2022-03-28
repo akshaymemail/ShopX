@@ -30,14 +30,15 @@ const BannerSlide = ({ banners }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 200,
+    height: 150,
   },
   pagerView: {
     flex: 1,
   },
   image: {
-    height: 200,
-    width: '100%',
+    height: 150,
+    marginHorizontal: 20,
+    borderRadius: 10,
   },
 
   dots: {
