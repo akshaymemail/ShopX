@@ -1,5 +1,5 @@
 /* eslint-disable semi */
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import React, { Fragment } from 'react'
 import Colors from '../../themes/colors'
 import Header from '../../components/Header'
@@ -9,13 +9,21 @@ import banners from '../../fakedb/banners'
 import SearchBar from '../../components/SearchBar'
 import Categories from '../../components/Categories'
 import categories from '../../fakedb/categories'
+import ProductCategories from '../../components/ProductCategories'
+import products from '../../fakedb/products'
 
 export default function Home({ navigation }) {
+  // fires up when see all pressed
   const onSeeAll = () => {
     alert('See All')
   }
+
+  // fires up on product is selected
+  const onSelect = () => {
+    alert('Product selected')
+  }
   return (
-    <View style={styles.screen}>
+    <ScrollView style={styles.screen}>
       <Header
         title="ShopX Mall"
         rightContent={() => {
@@ -30,7 +38,18 @@ export default function Home({ navigation }) {
       <SearchBar placeholder="Search Product Name" />
       <BannerSlide banners={banners} />
       <Categories categories={categories} onSeeAll={onSeeAll} />
-    </View>
+      {products.map(({ title, items }, i) => {
+        return (
+          <ProductCategories
+            key={i}
+            title={title}
+            categories={items}
+            onSeeAll={onSeeAll}
+            onSelect={onSelect}
+          />
+        )
+      })}
+    </ScrollView>
   )
 }
 

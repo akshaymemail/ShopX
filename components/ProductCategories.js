@@ -5,35 +5,41 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  Image,
 } from 'react-native'
 import React from 'react'
 import Colors from '../themes/colors'
+import Product from './Product'
 
-export default function Categories({ categories, onSeeAll }) {
+export default function ProductCategories({
+  title,
+  categories,
+  onSeeAll,
+  onSelect,
+}) {
   return (
     <View style={styles.container}>
       <View style={styles.heading}>
-        <Text style={styles.heading__title}>Categories</Text>
+        <Text style={styles.heading__title}>{title}</Text>
         <TouchableOpacity activeOpacity={0.6} onPress={onSeeAll}>
           <Text style={styles.heading__seeAll}>See All</Text>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {categories.map(({ title, image }, i) => {
-          return <CategoryItem key={i} title={title} image={image} />
+        {categories.map((item, i) => {
+          return (
+            <Product
+              key={i}
+              name={item.title}
+              image={item.image}
+              price={item.price}
+              rating={item.rating}
+              reviews={item.reviews}
+              onSelect={onSelect}
+            />
+          )
         })}
       </ScrollView>
     </View>
-  )
-}
-
-const CategoryItem = ({ title, image }) => {
-  return (
-    <TouchableOpacity activeOpacity={0.6} style={styles.item}>
-      <Image style={styles.image} source={image} />
-      <Text style={styles.title}>{title}</Text>
-    </TouchableOpacity>
   )
 }
 
