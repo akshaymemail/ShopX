@@ -37,7 +37,7 @@ export default function Product(props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 20,
+    marginVertical: 10,
     padding: 8,
     margin: 5,
     backgroundColor: Colors.PRIMARY.PURE_WHITE,

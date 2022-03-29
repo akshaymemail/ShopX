@@ -17,6 +17,7 @@ import Orders from '../screens/orders'
 import Login from '../screens/login'
 import Colors from '../themes/colors'
 import MyStatusBar from '../components/StatusBar'
+import HomeStack from './HomeStack'
 
 export default function Navigator() {
   const Tab = createBottomTabNavigator()
@@ -35,17 +36,20 @@ export default function Navigator() {
     <NavigationContainer>
       <MyStatusBar />
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="HomeStack"
         screenOptions={{
           headerShown: false,
         }}
         tabBar={(props) => <MyTabBar {...props} />}
       >
         <Tab.Screen
-          name="Home"
-          component={Home}
+          name="HomeStack"
+          component={HomeStack}
           initialParams={{
             icon: 'home',
+          }}
+          options={{
+            title: 'Home',
           }}
         />
         <Tab.Screen

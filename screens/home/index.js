@@ -14,13 +14,15 @@ import products from '../../fakedb/products'
 
 export default function Home({ navigation }) {
   // fires up when see all pressed
-  const onSeeAll = () => {
-    alert('See All')
+  const onSeeAll = (title) => {
+    navigation.navigate('Category', {
+      title,
+    })
   }
 
   // fires up on product is selected
   const onSelect = () => {
-    alert('Product selected')
+    navigation.navigate('Details')
   }
   return (
     <ScrollView style={styles.screen}>

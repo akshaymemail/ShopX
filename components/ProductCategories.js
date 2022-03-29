@@ -20,7 +20,10 @@ export default function ProductCategories({
     <View style={styles.container}>
       <View style={styles.heading}>
         <Text style={styles.heading__title}>{title}</Text>
-        <TouchableOpacity activeOpacity={0.6} onPress={onSeeAll}>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={onSeeAll.bind(this, title)}
+        >
           <Text style={styles.heading__seeAll}>See All</Text>
         </TouchableOpacity>
       </View>

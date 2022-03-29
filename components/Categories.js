@@ -15,7 +15,10 @@ export default function Categories({ categories, onSeeAll }) {
     <View style={styles.container}>
       <View style={styles.heading}>
         <Text style={styles.heading__title}>Categories</Text>
-        <TouchableOpacity activeOpacity={0.6} onPress={onSeeAll}>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={onSeeAll.bind(this, 'Categories')}
+        >
           <Text style={styles.heading__seeAll}>See All</Text>
         </TouchableOpacity>
       </View>
